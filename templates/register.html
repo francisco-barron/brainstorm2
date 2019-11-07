@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>BrainStorm</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+<link href="/static/register.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+<link rel="icon" type="image/png" href="/static/brainstormlogo.png">
+</head>
+                
+                
+                
+
+                </head>
+    <body>
+                
+                
+                
+                
+        <div class="vid-container">
+                        <img class="bgvid"  src="/static/astheticrain.gif" >
+                        
+                        <iframe src="/static/index1.mp3" allow="autoplay" id="audio" style="display:none">
+                        
+                        </iframe>
+                
+                    <div class="container">
+                
+                <div>
+                
+                  <h1 class="sitename">BrainStorm</h1>
+                  <img class="logobox" src="/static/brainstormlogo.png" alt="logo" width="150">
+                
+                 <div class="login">
+                 
+                
+                
+                
+                
+                
+                            <div class="columns is-centered">
+                              <article class="card is-rounded">
+                                <div class="card-content">
+                                  <h5>
+                                
+                                                   
+                            
+                                  </h5>
+                                  
+                                  <form method="post" action="/register">
+                                    {% with messages = get_flashed_messages() %}
+                                    {% if messages %}
+                                      {% for message in messages %}
+                                        <p>{{message}}</p>
+                                      {% endfor %}
+                                    {% endif %}
+                                  {% endwith %}
+                                    <p class="control has-icon">
+                                            <label for="name">First Name</label>
+                                            <input type="text" id="email" name="name" class="input" />
+                                            <i class="fa fa-envelope"></i>
+                                          </p>
+                                    <p class="control has-icon">
+                                    <label for="email">Email</label>
+                                    <input type="text" id="email" name="email" class="input" />
+                                    <i class="fa fa-envelope"></i>
+                                  </p>
+                                  <p class="control has-icon">
+                                   <label for="password">Password</label>
+                                   <input type="password" id="password" name="password" class="input" />
+                                    <i class="fa fa-lock"></i>
+                                  </p>
+                                  <p class="control has-icon">
+                                        <label for="confirm_password">Confirm Password</label>
+                                        <input type="password" id="confirm_password" name="confirm_password" class="input" />
+                                         <i class="fa fa-lock"></i>
+                                       </p>
+
+                                    <button class="button is-dark is-medium is-fullwidth">
+                                      <i class="fa fa-user"></i>
+                                      Register
+                                    </button>
+                                  
+                                  </p>
+                                  </form>
+                                  <br>
+                                  <br>
+                                  Already a member?<a href="/">   Log In !</a>
+                                
+                                </div>
+                              </article>
+                            </div>
+                          </div>
+                    
+                 
+                   </div>
+                 </div>
+                 
+                
+                
+        </div>
+                
+                    
+    </body>
+                
+</html>

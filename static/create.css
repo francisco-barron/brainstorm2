@@ -1,0 +1,80 @@
+.vid-container{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color:black;
+}
+
+.bgvid{
+    margin-top:20px;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100vw;
+}
+.login{
+ 
+margin-top:50px;
+margin-left: 30px;
+
+
+
+}
+.font{
+
+font-family: 'Fredoka One', cursive;
+font-size: 50px;
+font-weight: 900;
+text-shadow: 2px 2px 4px #000000;
+color: white;
+
+
+}
+
+
+
+.logobox{
+
+
+display: inline-block;
+margin-left: -46px;
+
+}
+.nav{
+
+  margin-left: 367px;
+display: inline-block;
+}
+.bottom{
+
+margin-top: 200px;
+
+}
+
+.box{
+
+border-style: solid;
+border-width: 10px;
+border-color: #da889a;
+box-shadow: 17px 21px 18px;
+
+}
+.boxbrain{
+
+display: inline-block;
+margin-left: -100px;
+
+}
+.bn{
+
+font-family: 'Fredoka One', cursive;
+
+}
+.navbox{
+width: 1263px;
+
+}
+.error{
+    text-decoration-color: red;
+    
+    }

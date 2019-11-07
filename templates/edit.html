@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BrainStorm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='edit.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/brainstormlogo.png">
+</head>
+<body>
+
+
+
+
+    <div class="vid-container">
+        <img class="bgvid"  src="/static/astheticrain.gif" >   
+        <audio autoplay loop >
+            <source src="/static/stormy.mp3" type="audio/mpeg" >
+
+        </audio>
+          
+
+
+        <div class="container">
+            <div class="navbox">
+		        <div class="notification is-black">
+			<h1 class="font">
+
+				Edit BrainStorm<img class="logobox" src="/static/brainstormlogo.png" alt="logo" width="80">
+				<div class="nav"><a href="/home" class="button is-large is-dark is-inverted is-outlined">HOME</a><a href="/logout" class="button is-large is-dark is-inverted is-outlined">LOG OUT</a></div>
+				
+		
+			</h1>
+			
+		        </div>
+	        </div>
+	
+		
+		<!-- Form -->
+		<br>
+		<br>
+		<section class="bottom">
+		<div class="columns is-centered">
+            <article class="card is-rounded">
+             <div class="box">
+                <div class="card-content">
+				    <div class="column">
+
+                        <form method="post" action="/update/{{idea['id']}}">
+                            {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                              {% for message in messages %}
+                                <p>{{message}}</p>
+                              {% endfor %}
+                            {% endif %}
+                          {% endwith %}
+                            <p class="control has-icon">
+                              <label for="name">New Storm Name</label>
+                              <input type="text" id="name" placeholder="{{idea['name']}}" name="name" class="input" />
+                              <i class="fa fa-envelope"></i>
+                            </p>
+                            <p class="control has-icon">
+                                    <input type="hidden" id="creator" name="creator" value="{{user[0]['name']}}"  />
+                                    <i class="fa fa-envelope"></i>
+                                  </p>
+                                  <br>
+                            <p class="control">
+                              <button class="button is-dark is-medium is-fullwidth">
+                                <i class="fa fa-user"></i>
+                                Update
+                              </button>
+                            
+                            </p>
+                        </form>
+	
+
+
+				    </div>
+				<div class="column"></div>
+			</div>
+			</div>
+			
+			</article>
+			</div>
+		
+
+		</section>
+		
+		
+		
+	    </div>
+    </div>
+</body>
+</html>

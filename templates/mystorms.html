@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BrainStorm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mystorms.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/brainstormlogo.png">
+</head>
+<body>
+
+
+
+
+    <div class="vid-container">
+        <video class="bgvid" autoplay muted loop >
+            <source src="/static/chillax.mp4" type="video/mp4">
+        </video>  
+                  
+        <audio autoplay loop >
+        
+          <source src="/static/amour.mp3" type="audio/mpeg" >
+        
+        </audio>
+         
+        
+        
+        
+        <div class="container">
+            <div class="notification">
+                <h1 class="font">
+                    Welcome,
+                    {{user[0]['name']}}
+                </h1>
+            </div>
+        
+            {% if myideas %}     
+                <!-- table ideas -->
+            <div class="tbl">
+                <h1 class="sitenamehome">Your   </h1>
+                <h1 class="sitenamehome">BrainStorms</h1>
+                <img class="logoboxhome" src="/static/brainstormlogo.png" alt="logo" width="80">
+
+                <div class="scroll">
+                    <table class="table is-bordered is rounded is-striped is-narrow is-hoverable is-fullwidth">
+                    <thead class="dashtable has-background-grey-light ">
+                        <tr>
+                            <td>Storm Name</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+		
+                            {% for idea in myideas %}
+                                <tr class="has-background-grey-lighter">
+                                <td><marquee ><a href="/storms/{{idea['id']}}" >"{{idea['name']}}"</a></marquee></td>
+                                <td><a href="/edit/{{idea['id']}}">Edit  </a>  | <a href="/delete/{{idea['id']}}">Delete</a></td>
+                            
+                                </tr>
+                            {% endfor %}
+                        
+
+        
+
+                    </tbody>
+                    </table>
+                </div>
+                <br>	     
+        
+            <div class="buttons has-addons">
+                    
+                <a href="/new" class="button is-large is-dark is-inverted is-outlined">Create Storm</a>
+                <a href="/home" class="button is-large is-dark is-inverted is-outlined">All Storms</a>	
+                <a href="" class="button is-large is-dark is-inverted is-outlined">Messages</a>
+                <a href="/logout" class="button is-large is-dark is-inverted is-outlined">Log Out</a>
+                    
+            </div>
+            {% else %}
+
+            <div class="tbl">
+                    <h1 class="sitenamehome">No    </h1>
+                    <h1 class="sitenamehome">BrainStorms</h1>
+                    <img class="logoboxhome" src="/static/brainstormlogo.png" alt="logo" width="80">
+            <div class="buttons has-addons">
+                    
+                    <a href="/new" class="button is-large is-dark is-inverted is-outlined">Create Storm</a>
+                    <a href="/home" class="button is-large is-dark is-inverted is-outlined">All Storms</a>	
+                    <a href="" class="button is-large is-dark is-inverted is-outlined">Messages</a>
+                    <a href="/logout" class="button is-large is-dark is-inverted is-outlined">Log Out</a>
+                        
+            </div>
+            </div>
+            
+         {% endif %}
+                
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

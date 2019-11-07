@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>BrainStorm</title>
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='storm.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+	<link rel="icon" type="image/png" href="../brainstormlogo.png">
+</head>
+<body>
+
+
+
+
+
+<div class="vid-container">
+  <img class="bgvid"  src="/static/astheticrain.gif" >   
+  
+  <audio autoplay loop >
+
+  <source src="/static/stormy.mp3" type="audio/mpeg" >
+
+</audio>
+          
+
+
+<div class="container">
+	<div class="navbox">
+		<div class="notification is-black">
+			<h1 class="font">
+
+                    {{idea['name']}}<img class="logoboxhome" src="/static/brainstormlogo.png" alt="logo" width="80">
+				
+				<div class="nav"><a href="/home" class="button is-large is-dark is-inverted is-outlined">HOME</a><a href="/storms" class="button is-large is-dark is-inverted is-outlined">Messages</a><a href="/logout" class="button is-large is-dark is-inverted is-outlined">Log Out</a></div>
+				
+		
+			</h1>
+		</div>
+	</div>
+		<h3 class="creator">
+			Created by
+            {{idea['creator']}}
+		</h3>
+	<div class="bottom">
+		</div>
+	
+
+			
+		<div>
+
+			<h1 class="font">
+                    {{ guests | length }} currently chasing this BrainStorm</h1>
+		</div>
+		<div>
+		<br>
+		</div>
+
+
+		<!-- table ideas -->
+		<div class="box">
+		<div class="scroll">
+		<table class="table  is-fullwidth is-bordered">
+			<thead class="dashtable">
+				<tr>
+
+
+				</tr>
+			</thead>
+			<tbody>
+
+                    {% for guest in guests %}
+					<tr>
+						<td><marquee class="font2" behavior="alternate">{{guest['name']}}</marquee></td>
+
+
+
+                    </tr>
+                    {% endfor %}
+				
+
+			</tbody>
+		</table>
+		</div>
+		</div>
+
+		{% if going %}
+		
+			<a href="/unjoin/{{idea['id']}}" class="button is-dark">unjoin</a>
+		{% else %}
+		   <a href="/join/{{idea['id']}}" class="button is-dark">join</a> 
+		   
+   		{% endif %}
+
+        <a href="" class="button is-dark">Send Message</a>
+
+	</div>
+	
+	</div>
+	
+	
+	
+
+</body>
+</html>

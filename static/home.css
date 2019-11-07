@@ -1,0 +1,52 @@
+.vid-container{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color:black;
+}
+
+.bgvid{
+    margin-top:20px;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100vw;
+}
+.font{
+
+font-family: 'Major Mono Display', monospace;
+font-size: 30px;
+font-weight: 900;
+display: inline-block;
+
+}
+
+.tbl{
+
+margin-left: 700px;
+margin-top: 150px;
+
+
+}
+.scroll{
+
+overflow: scroll;
+max-height: 300px;
+
+}
+.sitenamehome{
+color: white;
+
+font-size: 55px;
+font-family: 'Fredoka One', cursive;
+text-shadow: 2px 2px 4px #000000;
+display: inline-block;
+animation: text 3s 1;
+
+}
+.logoboxhome{
+
+display: inline-block;
+margin-left: -46px;
+
+}

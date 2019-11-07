@@ -1,0 +1,60 @@
+.vid-container{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color:black;
+    overflow: scroll;
+}
+                    
+.bgvid{
+    margin-top:20px;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100vw;
+}
+.login{
+                     
+    margin-top:50px;
+    margin-left: 30px;
+}
+.brain{
+                    
+    margin-left: 55px;
+                    
+}
+.sitename{
+    color: white;
+    margin-left: 450px;
+    margin-top: 320px;
+    font-size: 90px;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 2px 4px #000000;
+    display: inline-block;
+    animation: text 7s infinite;
+                    
+}
+@keyframes text{
+0%{
+    color:#285c69;
+}
+                    
+                    
+                    
+30%{
+    letter-spacing: 25px ;
+                    
+}
+85%{
+    letter-spacing: -1px ;
+                    
+                    
+}
+}
+                
+.logobox{
+                
+    display: inline-block;
+    margin-left: -100px;
+                
+}

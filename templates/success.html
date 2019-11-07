@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BrainStorm</title>
+    <link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='success.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+	<link rel="icon" type="image/png" href="../brainstormlogo.png">
+</head>
+
+<body>
+
+
+
+
+
+<div class="vid-container">
+  <img class="bgvid"  src="/static/astheticrain.gif" >  
+  
+    <audio autoplay loop >
+
+    <source src="/static/stormy.mp3" type="audio/mpeg" >
+
+    </audio>
+          
+
+
+<div class="container">
+
+
+	<div class="bottom">
+
+        
+		
+	
+       </div>
+
+
+       <img class="braingif" src= "/static/brain.gif">
+
+       <h1 class="sucfont">
+
+            {{idea['name']}}<img class="logoboxhome" src="/static/brainstormlogo.png" alt="logo" width="80"> WAS CREATED SUCCESSFULLY !
+       
+       
+
+   </h1>
+
+   <div class="options">
+
+        <div class="buttons has-addons">
+            <a href="/home" class="button is-large is-dark is-inverted is-outlined">All Storms</a>	
+            <a href="/mystorms" class="button is-large is-dark is-inverted is-outlined">Your Storms</a>
+            <a href="/logout" class="button is-large is-dark is-inverted is-outlined">Log Out</a>
+        
+         </div>
+    </div>
+
+			
+    
+
+		<!-- table ideas -->
+
+
+		
+
+	</div>
+	
+    </div>
+    
+
+
+</div>
+
+	
+	
+	
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+.vid-container{
+		position: relative;
+		height: 100vh;
+		overflow: hidden;
+		background-color:black;
+	}
+	
+	.bgvid{
+		margin-top:20px;
+		position: absolute;
+		left:0;
+		top:0;
+		width: 100vw;
+	}
+	.login{
+	 
+  margin-top:50px;
+  margin-left: 30px;
+
+
+	
+	}
+	.font{
+	
+	font-family: 'Fredoka One', cursive;
+	font-size: 50px;
+	font-weight: 900;
+	text-shadow: 2px 2px 4px #000000;
+	color: white;
+
+	
+	}
+	.font2{
+	
+	font-family: 'Fredoka One', cursive;
+	font-size: 20px;
+
+
+	color: black;
+
+	
+	}
+	.brain{
+	
+	margin-left: 55px;
+	
+	}
+	.creator{
+	
+font-size: 31px;
+    text-transform: capitalize;
+    padding-left: 10px;
+    background-color: white;
+    color: #000000;
+    /* text-shadow: -2px 1px 2px black, 0 0 2px #333333, 0 0 3px black; */
+    margin-left: 20px;
+    font-family: 'Fredoka One', cursive;
+    box-shadow: 10px 10px 5px grey;
+    width: 335px;
+    border-radius: 4px;
+	
+	
+	}
+	.sitename{
+	color: white;
+    margin-left: 450px;
+    margin-top: 320px;
+    font-size: 90px;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 2px 4px #000000;
+    display: inline-block;
+    animation: text 5s 1;
+    
+	}
+	@keyframes text{
+	0%{
+	color:#285c69;
+	}
+	
+	
+	
+	30%{
+	letter-spacing: 25px ;
+	
+	
+	}
+	85%{
+	letter-spacing: -1px ;
+	
+	
+	}
+	.bn{
+
+	font-family: 'Fredoka One', cursive;
+
+}
+	}
+
+.logoboxhome{
+
+display: inline-block;
+margin-left: -46px;
+
+}
+.nav{
+
+      margin-left: 300px;
+    display: inline-block;
+}
+.bottom{
+
+margin-top: 165px;
+
+}
+.box{
+
+    border-style: solid;
+    width: 500px;
+    border-width: 10px;
+    border-color: #da889a;
+    box-shadow: 10px 10px;
+}
+
+
+
+
+
+  
+
+.navbox{
+width: 1163px;
+
+}
+
+.scroll{
+	
+    overflow: scroll;
+    max-height: 300px;
+	
+}
