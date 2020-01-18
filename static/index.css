@@ -31,25 +31,26 @@
     font-family: 'Fredoka One', cursive;
     text-shadow: 2px 2px 4px #000000;
     display: inline-block;
-    animation: text 7s infinite;
+    animation: text 5s 1;
                     
 }
 @keyframes text{
-0%{
-    color:#285c69;
-}
+    0%{
+        color:#285c69;
+    }
                     
                     
                     
-30%{
-    letter-spacing: 25px ;
-                    
-}
-85%{
-    letter-spacing: -1px ;
+    30%{
+        letter-spacing: 25px ;
                     
                     
-}
+    }
+    85%{
+        letter-spacing: -1px ;
+                    
+                    
+    }
 }
                 
 .logobox{
